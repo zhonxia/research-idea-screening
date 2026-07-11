@@ -38,16 +38,22 @@ For a large batch, use a shallow first pass, eliminate clear failures, and spend
 7. Score only passed candidates on significance, differentiation, feasibility, validation clarity, cost efficiency, and failure residual value. Record confidence and a one-sentence evidence-based reason for every score.
 8. Run a pre-mortem: name the largest failure risk, earliest warning signal, stop rule, and salvageable output.
 9. Recommend `Proceed`, `Probe first`, `Park`, or `Reject`.
-10. Write the report from [assets/rapid-screen-report.md](assets/rapid-screen-report.md). For batch mode, preserve per-idea reports and add a confidence-aware comparison table.
+10. Write the report from [assets/rapid-screen-report.md](assets/rapid-screen-report.md). For batch mode, preserve per-idea reports and add a comparison table.
+
+**Plain language rule for all output**: Never expose internal scoring mechanics ("band", "range", "interval", "sensitivity", "threshold crossing") to the user. Every conclusion must be rephrased in everyday language. For example, instead of "score crosses into probe-first band", say "not certain enough yet — suggest a quick test first to confirm". The report template already uses plain labels; preserve that spirit everywhere.
 
 Use `scripts/score_screening.py` for deterministic scoring and sensitivity ranges. The script supports one JSON object or a list of objects. Run `python scripts/score_screening.py --example` to inspect its input contract.
 
-## Interpret Decisions
+## Interpret Decisions (plain language)
 
-- `Proceed`: no failed or unknown critical gate, credible differentiation, and sufficient expected value for deeper evaluation.
-- `Probe first`: a decision-relevant uncertainty has a cheap test, or plausible score ranges change the decision.
-- `Park`: no fatal flaw, but current expected value loses to opportunity cost or timing.
-- `Reject`: a critical gate fails, the idea is an exact duplicate without a meaningful delta, or a fatal risk has no credible mitigation.
+When writing the final recommendation, use everyday language. Do NOT mention internal scoring concepts like "bands", "thresholds", "intervals", or "sensitivity".
+
+| Internal concept | Say this to the user |
+|---|---|
+| `Proceed` | Worth pursuing — go ahead with deeper evaluation |
+| `Probe first` | Not certain enough yet; run a small quick test first before deciding |
+| `Park` | Not worth doing right now; revisit later if conditions change |
+| `Reject` | Has fundamental problems — recommend letting this one go |
 
 Treat thresholds as defaults, not scientific facts. Override a script recommendation only with an explicit reason.
 

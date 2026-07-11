@@ -12,9 +12,7 @@ search_budget: "30 minutes; <=12 queries"
 ## Decision
 
 **Recommendation**: Proceed / Probe first / Park / Reject  
-**Score range**: XX.X-XX.X / 100  
 **Overall confidence**: Low / Medium / High  
-**Decision sensitivity**: Stable / Sensitive  
 **One-sentence reason**: [reason]
 
 ## Idea
@@ -27,62 +25,59 @@ search_budget: "30 minutes; <=12 queries"
 - **Proposed contribution**: [new knowledge, method, evidence, data, measure, or artifact]
 - **Explicit exclusions**: [not claimed]
 
-## Rapid Collision Check
+## Existing Work Checked
 
-- **Narrow differentiation claim**: [claim searched]
-- **Channels and date range**: [scope]
-- **Query families**: [exact, synonyms, legacy, adjacent, counter-hypothesis]
-- **Stopping condition**: budget exhausted / early collision / sufficient for screen
-- **Evidence grade**: C / D
+- **Search scope**: [keywords, databases, date range]
+- **Closest existing works**: [list 3-5 closest works with brief overlap/difference notes]
 
-| Closest work | Identifier | Overlap | Remaining difference | Threat |
-|---|---|---|---|:---:|
-| [work] | [DOI/URL] | [overlap] | [difference] | H/M/L |
+| Work | Overlap | Key difference |
+|---|---|---|
+| [work] | [overlap] | [difference] |
 
-**Bounded conclusion**: [Use preliminary, scope-limited wording.]  
-**Contrary evidence and missing coverage**: [limitations]
+**Conclusion**: [Preliminary, scope-limited wording — e.g. "No exact match found within searched sources."]  
+**Limitations**: [what wasn't searched, what remains uncertain]
 
-## Hard Gates
+## Quick Checks
 
-| Gate | Result | Evidence | Probe if unknown |
-|---|:---:|---|---|
-| Significance | Yes/Unknown/No | [who cares and what changes] | [probe] |
-| Answerability | Yes/Unknown/No | [falsifier or bounding result] | [probe] |
-| Resource path | Yes/Unknown/No | [data, tools, access, time, money, expertise] | [probe] |
-| Ethics/governance | Yes/Unknown/No | [risk and permissions] | [probe] |
+| Check | Pass? | Notes |
+|---|:---:|---|
+| Important problem | Yes/Unknown/No | [who cares and what changes] |
+| Can be answered | Yes/Unknown/No | [can results prove or disprove the idea] |
+| Resources available | Yes/Unknown/No | [data, tools, access, time, money, expertise] |
+| Ethical / permissible | Yes/Unknown/No | [risk and permissions] |
+| Different enough | Yes/Unknown/No | [how this differs from existing work] |
 
-## Value And Effort
+If any check is "No", the idea is likely not worth pursuing. If "Unknown", a quick test is needed.
 
-| Dimension | Weight | Score | Confidence | Evidence-based reason | Decision-changing evidence |
-|---|:---:|:---:|:---:|---|---|
-| Significance | 25 | X.X | L/M/H | [reason] | [evidence] |
-| Differentiation | 20 | X.X | L/M/H | [reason] | [evidence] |
-| Feasibility | 15 | X.X | L/M/H | [reason] | [evidence] |
-| Validation clarity | 15 | X.X | L/M/H | [reason] | [evidence] |
-| Cost efficiency | 15 | X.X | L/M/H | [reason] | [evidence] |
-| Failure residual | 10 | X.X | L/M/H | [reason] | [evidence] |
+## Scoring (if all checks above pass)
 
-- **Minimum-probe time/cost**: [range]
-- **First credible-result time/cost**: [range]
-- **Publishable/reusable-result time/cost**: [range]
-- **Primary opportunity cost**: [what is displaced]
+| Factor | Weight | Score (1-5) | Why this score |
+|---|---|---|---|
+| Importance | 25 | X.X | [reason] |
+| Differentiation | 20 | X.X | [reason] |
+| Feasibility | 15 | X.X | [reason] |
+| Test clarity | 15 | X.X | [reason] |
+| Cost-value | 15 | X.X | [reason] |
+| Fallback value if fails | 10 | X.X | [reason] |
 
-## Pre-Mortem
+- **Estimated time to first meaningful result**: [range]
+- **Estimated total effort**: [range]
+- **What else this would displace**: [opportunity cost]
 
-- **Largest failure risk**: [risk]
-- **Earliest warning signal**: [signal]
-- **Stop rule**: [observable threshold]
-- **Mitigation**: [action]
-- **Failure residual**: [negative result, boundary, data, benchmark, tool, or reusable method]
-- **Residual beneficiary**: [who or what decision can use it]
+## What Could Go Wrong
 
-## Cheapest Decision-Changing Probe
+- **Biggest risk**: [what's most likely to kill this]
+- **Early warning sign**: [what to watch for first]
+- **Stopping rule**: [when to cut losses]
+- **How to reduce risk**: [mitigation]
 
-- **Uncertainty tested**: [uncertainty]
-- **Procedure**: [small proof, pilot, data audit, interview, reproduction, prototype]
-- **Pass criterion**: [threshold]
-- **Stop criterion**: [threshold]
-- **Budget**: [time/resources]
+## Next Step
+
+- **What we're unsure about**: [uncertainty]
+- **Quickest way to check**: [small proof, pilot, data audit, interview, reproduction, prototype]
+- **What counts as "it worked"**: [threshold]
+- **What counts as "stop trying"**: [threshold]
+- **Time/cost for this check**: [budget]
 
 ## Handoff To Research Ideation
 
