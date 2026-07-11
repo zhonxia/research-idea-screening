@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Idea Screening"
+  short_description: "Rapidly screen research ideas for value and risk"
+  default_prompt: "Use $research-idea-screening to quickly screen this research idea and recommend the next decision."
