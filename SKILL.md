@@ -1,73 +1,73 @@
 ---
 name: research-idea-screening
-description: "Rapidly screen one or many early-stage research ideas using bounded novelty search, significance and answerability gates, feasibility and cost estimates, validation planning, pre-mortem risk analysis, failure residual value, confidence-aware scoring, and portfolio ranking. Use when deciding whether a research idea is worth deeper evaluation, comparing many candidate topics, triaging an idea backlog, or defining the cheapest next probe before committing substantial time or money."
+description: "快速筛选一个或多个早期研究点子，使用有界新颖性搜索、重要性和可回答性门控、可行性与成本估计、验证规划、预 mortem 风险分析、失败残值、置信度感知评分和投资组合排名。在以下场景使用：决定一个研究点子是否值得深入评估、比较多候选方向、梳理点子积压、或在投入大量时间/资金前定义最便宜的下一步探测。"
 ---
 
-# Research Idea Screening
+# 研究点子快速筛选
 
-Decide whether an early research idea deserves deeper evaluation. Keep the screen cheap, expose uncertainty, and recommend the next information-gaining action. Do not present a rapid screen as a novelty proof or full research evaluation.
+决定一个早期研究点子是否值得深入评估。保持筛选低成本、暴露不确定性、推荐下一个能获取信息的最优行动。不要将快速筛选呈现为新颖性证明或完整的研究评估。
 
-## Choose A Mode
+## 选择模式
 
-- Use `single` for one idea.
-- Use `batch` to compare multiple ideas under the same research profile and screening budget.
-- Use `refresh` when new evidence may change an earlier screen.
+- `single` — 单个点子
+- `batch` — 在同一研究画像和筛选预算下比较多个点子
+- `refresh` — 出现新证据时重新评估之前的筛选结果
 
-Read [references/screening-protocol.md](references/screening-protocol.md) before screening. Select the closest research profile using [references/research-profiles.md](references/research-profiles.md).
+开始筛选前先阅读 [references/screening-protocol.md](references/screening-protocol.md)。使用 [references/research-profiles.md](references/research-profiles.md) 选择最接近的研究画像。
 
-## Define The Budget
+## 定义预算
 
-State the search and reasoning budget before starting. If the user does not provide one, default to:
+在开始前声明搜索和推理预算。如果用户没有提供，默认：
 
-- 30 minutes of conceptual and literature screening
-- at most 12 search queries per idea
-- one recent review or authoritative synthesis when available
-- 3-5 closest works
-- no citation-chain saturation requirement
+- 30 分钟的概念和文献筛选
+- 每个点子最多 12 次搜索查询
+- 1 篇近期的综述或权威综合（如有）
+- 3-5 篇最相关工作
+- 不需要引用链饱和
 
-For a large batch, use a shallow first pass, eliminate clear failures, and spend the remaining budget only on plausible candidates.
+对于大批量筛选，先做一轮浅层过滤排除明显不可行的候选，然后将剩余预算仅用于有希望的方向。
 
-## Run The Screen
+## 执行筛选
 
-1. Rewrite the idea as: target or system, condition, mechanism or intervention, comparator, and intended outcome.
-2. State the proposed contribution and the narrow differentiation claim before searching.
-3. Search exact, synonymous, legacy, adjacent, and counter-hypothesis terms within the declared budget.
-4. Verify identifiers and inspect abstracts or primary sources for the closest works. Record exact overlap, partial overlap, adjacent work, contrary evidence, and unresolved scope.
-5. Apply the four hard gates: significance, answerability, resource path, and ethics/governance.
-6. Stop scoring when a critical gate is `No`. Convert every `Unknown` into a bounded probe.
-7. Score only passed candidates on significance, differentiation, feasibility, validation clarity, cost efficiency, and failure residual value. Record confidence and a one-sentence evidence-based reason for every score.
-8. Run a pre-mortem: name the largest failure risk, earliest warning signal, stop rule, and salvageable output.
-9. Recommend `Proceed`, `Probe first`, `Park`, or `Reject`.
-10. Write the report from [assets/rapid-screen-report.md](assets/rapid-screen-report.md). For batch mode, preserve per-idea reports and add a confidence-aware comparison table.
+1. 将点子改写为：目标/系统、条件、机制/干预、比较对象、预期结果
+2. 在搜索前声明拟贡献和窄化差异声明
+3. 在声明预算内搜索精确词、同义词、旧术语、相邻领域和反假设
+4. 验证标识符并检查最相关工作的摘要或原始来源。记录：精确重叠、部分重叠、相邻工作、反面证据、未解决的范围
+5. 应用四个硬性门控：重要性、可回答性、资源路径、伦理/治理
+6. 当某个关键门控为「否」时停止评分。将每个「未知」转化为有界的探测方案
+7. 仅对通过门控的候选进行评分：重要性、差异化、可行性、验证清晰度、成本效率、失败残值。记录置信度和每个维度的基于证据的一句话理由
+8. 运行事前分析：命名最大失败风险、最早预警信号、停止规则、可挽回的产出
+9. 推荐「推进」/「先探索」/「搁置」/「拒绝」
+10. 使用 [assets/rapid-screen-report.md](assets/rapid-screen-report.md) 模板撰写中文报告。对于 batch 模式，保留每份点子的独立报告并添加置信度感知的对比表
 
-Use `scripts/score_screening.py` for deterministic scoring and sensitivity ranges. The script supports one JSON object or a list of objects. Run `python scripts/score_screening.py --example` to inspect its input contract.
+使用 `scripts/score_screening.py` 进行确定性评分和敏感性范围分析。脚本支持单个 JSON 对象或对象列表。运行 `python scripts/score_screening.py --example` 查看输入格式。
 
-## Interpret Decisions
+## 解读决策
 
-- `Proceed`: no failed or unknown critical gate, credible differentiation, and sufficient expected value for deeper evaluation.
-- `Probe first`: a decision-relevant uncertainty has a cheap test, or plausible score ranges change the decision.
-- `Park`: no fatal flaw, but current expected value loses to opportunity cost or timing.
-- `Reject`: a critical gate fails, the idea is an exact duplicate without a meaningful delta, or a fatal risk has no credible mitigation.
+- **推进**：没有失败或未知的关键门控，有可信的差异化，且预期价值足以进行深入评估
+- **先探索**：存在一个决策相关的不确定性可以通过低成本测试解决，或置信区间跨越了决策阈值
+- **搁置**：没有致命缺陷，但当前预期价值低于机会成本或时机不合适
+- **拒绝**：关键门控失败、点子与已有工作完全重复且无有意义的增量、或存在无可信缓解方案的致命风险
 
-Treat thresholds as defaults, not scientific facts. Override a script recommendation only with an explicit reason.
+将阈值视为默认值而非科学事实。只有在有明确理由时才覆盖脚本推荐。
 
-## Rank A Batch
+## 批量排名
 
-Compare only ideas screened under compatible profiles and budgets. Rank by decision class first, then score range and opportunity cost. Mark a ranking `unstable` when plausible uncertainty intervals overlap or when one unresolved gate could reverse it. Do not force a total ordering; ties and incomparable ideas are valid outcomes.
+仅对在兼容画像和预算下筛选的点子进行比较。先按决策类别排名，再按分数范围和机会成本排序。当不确定性区间重叠或某个未解决的门控可能逆转结论时，标记为「不稳定」。不要强制完全排序；并列和不可比是有效结果。
 
-## Hand Off Worthwhile Ideas
+## 交接有价值的点子
 
-This skill does not assign idea IDs, mutate a research registry, or perform full novelty validation. When the user wants lifecycle management or formal evaluation, hand the result to `research-ideation` using the YAML block in the report template. Label the novelty evidence `rapid/bounded`; `research-ideation` must independently upgrade it before making a strong novelty claim.
+本 skill 不分配点子 ID、不修改研究注册表、不执行完整的新颖性验证。当用户需要生命周期管理或正式评估时，将结果以报告末尾的 YAML 块交接给 `research-ideation`。将新颖性证据标记为 `rapid/bounded`；`research-ideation` 在做出强新颖性声明前必须独立升级证据等级。
 
-## Non-Negotiable Rules
+## 不可协商的规则
 
-1. Never turn "not found quickly" into "no one has studied this."
-2. Separate problem importance from publication attractiveness.
-3. Apply gates before weighted scoring.
-4. Include time, money, access, expertise, permissions, and opportunity cost in feasibility.
-5. Define how the proposed contribution could be disproved, bounded, or materially revised.
-6. Compare against the strongest relevant baseline, not only a weak convenient baseline.
-7. Preserve negative and contrary evidence.
-8. Report confidence and decision sensitivity, not only a point score.
-9. Treat reusable data, code, tools, negative findings, boundary results, and literature maps as possible failure residuals only when a credible path exists.
-10. Prefer the cheapest probe that can change the decision.
+1. 永远不要将「没快速找到」等同于「没人研究过」
+2. 区分问题的重要性和论文的吸引力
+3. 在加权评分之前先应用门控
+4. 可行性评估必须包含时间、资金、访问权限、专业知识、许可和机会成本
+5. 定义拟贡献如何被证伪、有界化或实质性修正
+6. 与最强相关的基线比较，而非方便的弱基线
+7. 保留负面和反面证据
+8. 报告置信度和决策敏感性，而非仅仅一个点分数
+9. 仅在存在可信路径时，才将可复用的数据、代码、工具、负面发现、边界结果和文献图谱视为可能的失败残值
+10. 优先选择最能改变决策的最便宜探测方案
