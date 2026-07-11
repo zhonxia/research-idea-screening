@@ -1,25 +1,25 @@
-# 研究画像
+# Research Profiles
 
-选择一个主要画像，使得可行性和验证可以被公平地解释。
+Select one primary profile so feasibility and validation are interpreted fairly.
 
-## 理论型
+## Theoretical
 
-检查定义、假设、声明范围、与已知结果的关系、证明的可处理性、边界情况和反例。最小探测可能是受限的证明或反例搜索。
+Check definitions, assumptions, claim scope, relation to known results, proof tractability, boundary cases, and counterexamples. A minimum probe may be a restricted proof or counterexample search.
 
-## 计算或实验型
+## Computational Or Experimental
 
-检查数据、基线、度量、泄漏、统计功效、鲁棒性、计算资源、消融实验和可复现性。最小探测可能是基线复现或小型合成可识别性测试。
+Check data, baselines, metrics, leakage, power, robustness, compute, ablations, and reproducibility. A minimum probe may be baseline reproduction or a small synthetic identifiability test.
 
-## 定性研究型
+## Qualitative
 
-检查访问权限、抽样逻辑、知情同意、立场性、数据收集、编码能力、可信度和饱和。最小探测可能是访问确认或试点访谈。
+Check access, sampling logic, consent, positionality, data collection, coding capacity, credibility, and saturation. A minimum probe may be access confirmation or pilot interviews.
 
-## 临床或现场型
+## Clinical Or Field
 
-检查人群、比较对象、结果、安全性、招募、统计功效、方案注册、伦理和实施保真度。最小探测可能是回顾性可行性审计。
+Check population, comparator, outcomes, safety, recruitment, power, protocol registration, ethics, and implementation fidelity. A minimum probe may be a retrospective feasibility audit.
 
-## 设计或构造型
+## Design Or Constructive
 
-检查利益相关者需求、制品范围、实用性、可用性、现场表现、维护负担，以及工作是否产生可泛化的知识而非常规工程。最小探测可能是低保真原型或利益相关者走查。
+Check stakeholder need, artifact scope, utility, usability, field performance, maintenance burden, and whether the work yields generalizable knowledge rather than routine engineering. A minimum probe may be a low-fidelity prototype or stakeholder walkthrough.
 
-不要因为一个画像缺少另一个画像特有的制品而扣分。在批量模式中，避免跨不兼容画像直接排名，除非决策明确是关于投资组合的机会成本。
+Do not penalize one profile for lacking artifacts specific to another profile. In batch mode, avoid direct rankings across incompatible profiles unless the decision is explicitly about portfolio opportunity cost.

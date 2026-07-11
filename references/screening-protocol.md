@@ -1,106 +1,106 @@
-# 快速筛选协议
+# Rapid Screening Protocol
 
-## 目录
+## Contents
 
-1. 点子规范化
-2. 有界新颖性搜索
-3. 硬性门控
-4. 评分维度
-5. 风险与残值
-6. 决策与置信度
+1. Idea normalization
+2. Bounded novelty search
+3. Hard gates
+4. Scored dimensions
+5. Risk and residual value
+6. Decisions and confidence
 
-## 1. 点子规范化
+## 1. Idea Normalization
 
-捕获：
+Capture:
 
-- 目标人群、系统或领域
-- 条件或运行区间
-- 拟议机制、干预、方法或解释性声明
-- 最强原生基线或替代解释
-- 可观察结果
-- 贡献类型：理论、方法、实证发现、数据集/度量、制品、或综合
-- 明确排除
+- Target population, system, or domain
+- Condition or operating regime
+- Proposed mechanism, intervention, method, or explanatory claim
+- Strongest native baseline or alternative explanation
+- Observable outcome
+- Contribution type: theory, method, empirical finding, dataset/measure, artifact, or synthesis
+- Explicit exclusions
 
-如果这些无法陈述，推荐「先探索」并附上问题表述任务。
+If these cannot be stated, recommend `Probe first` with a question-formulation task.
 
-## 2. 有界新颖性搜索
+## 2. Bounded Novelty Search
 
-快速搜索建立冲突风险，而非证明普遍不存在。
+Rapid search establishes collision risk, not universal absence.
 
-从现象、机制、方法、结果、领域、同义词和旧术语构建查询族。搜索：
+Build query families from the phenomenon, mechanism, method, outcome, domain, synonyms, and legacy terminology. Search:
 
-1. 精确组合
-2. 同义词和旧术语变体
-3. 目标领域中的更广机制
-4. 相邻领域中的相同机制
-5. 反假设或已知局限性
-6. 近期综述或权威综合
+1. Exact conjunction
+2. Synonym and legacy-term variants
+3. Broader mechanism in the target domain
+4. Same mechanism in adjacent domains
+5. Counter-hypothesis or known limitation
+6. Recent reviews or authoritative syntheses
 
-对每个最相关工作，记录稳定标识符、重叠程度、剩余差异和威胁等级。快速证据分级：
+For every closest work, record a stable identifier, overlap, remaining difference, and threat level. Grade the rapid evidence:
 
-- **C**：使用了多个有用的渠道并验证了最相关工作，但未达到饱和或引用链完成
-- **D**：仅使用了本地文献库或少数初步查询
+- `C`: multiple useful channels and verified close works, but no saturation or citation-chain completion
+- `D`: local library or a few preliminary queries
 
-允许的措辞：
+Permitted wording:
 
-> 截至 YYYY-MM-DD，在声明的快速搜索范围内，未找到与[窄化声明]精确匹配的工作。这是初步的冲突证据，而非验证过的研究缺口声明。
+> Within the declared rapid-search scope through YYYY-MM-DD, no exact match was found for [narrow claim]. This is preliminary collision evidence, not a validated research-gap claim.
 
-## 3. 硬性门控
+## 3. Hard Gates
 
-| 门控 | 是 | 未知 | 否 |
+| Gate | Yes | Unknown | No |
 |---|---|---|---|
-| 重要性 | 有可信的利益相关者、理论、能力或决策会因答案而改变 | 重要性依赖于未经测试的利益相关者或后果假设 | 没有可识别的受益者或后果 |
-| 可回答性 | 结果可以拒绝、有界化或实质性修正该声明 | 结果或证伪条件需要一个小型设计探测 | 没有可观察或逻辑结果能判断该声明 |
-| 资源路径 | 存在通往数据/前提、工具、专业知识、访问、时间、资金和许可的合理路径 | 一个或多个关键前提需要限定范围的审计 | 关键前提不可用且无可信替代方案 |
-| 伦理/治理 | 风险可接受，或有可信的审批和缓解路径 | 审查或许可状态未解决 | 风险不可接受，或所需审批不可行 |
+| Significance | A credible stakeholder, theory, capability, or decision changes with the answer | Importance rests on an untested stakeholder or consequence assumption | No identifiable beneficiary or consequence |
+| Answerability | A result can reject, bound, or materially revise the claim | Outcome or falsifier needs a small design probe | No observable or logical result can adjudicate the claim |
+| Resource path | A plausible route exists to data/premises, tools, expertise, access, time, money, and permissions | One or more critical prerequisites require a bounded audit | A critical prerequisite is unavailable with no credible substitute |
+| Ethics/governance | Risk is acceptable or has a credible approval and mitigation route | Review or permission status is unresolved | Risk is unacceptable or required approval is implausible |
 
-任何「否」通常意味着「拒绝」。任何「未知」通常意味着「先探索」，然后才进行加权决策。
+Any `No` normally implies `Reject`. Any `Unknown` normally implies `Probe first` before a weighted decision.
 
-## 4. 评分维度
+## 4. Scored Dimensions
 
-仅在门控通过后按 1-5 分、0.5 分间隔评分。
+Score 1-5 in 0.5 increments only after gates pass.
 
-| 维度 | 权重 | 1 分 | 3 分 | 5 分 |
-|---|---|---|---|---|
-| 重要性 | 25 | 边缘性后果 | 对定义的受众有用 | 实质性改变重要知识、能力或决策 |
-| 差异化 | 20 | 精确或琐碎的重复 | 可辩护的扩展 | 有强快速证据支持的重要有界差异 |
-| 可行性 | 15 | 无可信技术/资源路径 | 主要但可探测的不确定性 | 清晰的路径且先决条件可访问 |
-| 验证清晰度 | 15 | 无法判断成功 | 存在可行的测试但威胁未解决 | 决定性的测试、强基线和明确的敏感性分析 |
-| 成本效率 | 15 | 高成本和机会损失，价值不高 | 可接受的成本-价值权衡 | 每单位时间和资金获得高信息量或高影响 |
-| 失败残值 | 10 | 失败无可信输出 | 一些可复用的学习或制品 | 有价值的负面结果、边界、数据、基准、工具或方法 |
+| Dimension | Weight | 1 | 3 | 5 |
+|---|:---:|---|---|---|
+| Significance | 25 | Marginal consequence | Useful to a defined audience | Materially changes important knowledge, capability, or decisions |
+| Differentiation | 20 | Exact or trivial duplication | Defensible extension | Important bounded difference supported by strong rapid evidence |
+| Feasibility | 15 | No credible technical/resource route | Major but probeable uncertainty | Clear route with accessible prerequisites |
+| Validation clarity | 15 | Success cannot be judged | Plausible tests with unresolved threats | Decisive tests, strong baselines, and explicit uncertainty analysis |
+| Cost efficiency | 15 | High cost and opportunity loss for likely value | Acceptable cost-value tradeoff | High information or impact per unit of time and money |
+| Failure residual | 10 | Failure leaves no reliable output | Some reusable learning or artifact | Valuable negative result, boundary, data, benchmark, tool, or method remains |
 
-对每个维度记录「低」、「中」或「高」置信度，以及最能改变它的证据。
+For each dimension record `Low`, `Medium`, or `High` confidence and the evidence that would most change it.
 
-## 5. 风险与残值
+## 5. Risk And Residual Value
 
-运行事前分析：假设项目在预期时长后失败。识别：
+Run a pre-mortem: assume the project failed after its expected duration. Identify:
 
-- 最可能的决定性失败原因
-- 最高后果的失败
-- 最早可观察的预警信号
-- 停止规则
-- 缓解措施或更便宜的设计
-- 可挽回的路径
+- Most likely decisive failure
+- Highest-consequence failure
+- Earliest observable warning signal
+- Stop rule
+- Mitigation or cheaper design
+- Salvage path
 
-不要仅仅因为文件或代码将存在就授予残值。要求存在可识别的用户、声明或后续决策可以使用该残值。
+Do not award residual value merely because files or code will exist. Require an identifiable user, claim, or later decision that can use the residual.
 
-估算投入为范围而非单一日期：
+Estimate effort as ranges, not a single date:
 
-- 最小探测所需时间
-- 首次可信结果所需时间
-- 可发表或可复用结果所需时间
-- 直接财务/计算成本
-- 所需专业人才投入
-- 主要机会成本
+- Time to minimum probe
+- Time to first credible result
+- Time to publishable or reusable result
+- Direct financial/compute cost
+- Required specialist effort
+- Primary opportunity cost
 
-## 6. 决策与置信度
+## 6. Decisions And Confidence
 
-所有门控通过后的默认分数指导：
+Default score guidance after all gates are `Yes`:
 
-- **70-100**：推进
-- **50-69.9**：先探索
-- **低于 50**：搁置
+- `70-100`: `Proceed`
+- `50-69.9`: `Probe first`
+- below `50`: `Park`
 
-使用「拒绝」处理门控失败、与已有工作完全重复且无有意义的增量、或存在未缓解的致命风险。当不确定性可能逆转决策时使用「先探索」，即使点分数超过 70。
+Use `Reject` for failed gates, exact duplication without meaningful delta, or an unmitigated fatal risk. Use `Probe first` whenever uncertainty can reverse the decision, even if the point score exceeds 70.
 
-置信区间是决策辅助工具。捆绑脚本对高置信度应用 +/-0.25、中对 +/-0.75、低对 +/-1.5 的默认分数不确定性（加权前）。如果区间跨越决策阈值，将推荐标记为敏感。
+Confidence intervals are decision aids. The bundled script applies default score uncertainty of +/-0.25 for High, +/-0.75 for Medium, and +/-1.5 for Low confidence before weighting. If an interval crosses a decision threshold, label the recommendation sensitive.

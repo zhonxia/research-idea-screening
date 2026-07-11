@@ -1,90 +1,90 @@
 ---
 screening_id: SCREEN-YYYYMMDD-NN
-title: 简短标题
+title: Short title
 mode: single | batch | refresh
 research_profile: theoretical | computational-experimental | qualitative | clinical-field | design-constructive
 screened_on: YYYY-MM-DD
-search_budget: "30 分钟；<=12 次查询"
+search_budget: "30 minutes; <=12 queries"
 ---
 
-# 研究点子快速筛选报告
+# Rapid Research Idea Screen
 
-## 决策
+## Decision
 
-**推荐结论**: 推进 / 先探索 / 搁置 / 拒绝  
-**得分范围**: XX.X-XX.X / 100  
-**整体置信度**: 低 / 中 / 高  
-**决策敏感性**: 稳定 / 敏感  
-**一句话理由**: [理由]
+**Recommendation**: Proceed / Probe first / Park / Reject  
+**Score range**: XX.X-XX.X / 100  
+**Overall confidence**: Low / Medium / High  
+**Decision sensitivity**: Stable / Sensitive  
+**One-sentence reason**: [reason]
 
-## 点子描述
+## Idea
 
-- **研究问题**: [精确、可回答的问题]
-- **目标/系统和条件**: [范围]
-- **机制/干预**: [范围]
-- **最强基线**: [基线或替代解释]
-- **预期产出**: [可观察的结果]
-- **拟贡献**: [新知识、方法、证据、数据、度量或制品]
-- **明确排除**: [不声称的内容]
+- **Research question**: [precise, answerable question]
+- **Target/system and condition**: [scope]
+- **Mechanism/intervention**: [scope]
+- **Strongest baseline**: [baseline or alternative explanation]
+- **Outcome**: [observable result]
+- **Proposed contribution**: [new knowledge, method, evidence, data, measure, or artifact]
+- **Explicit exclusions**: [not claimed]
 
-## 快速查重结果
+## Rapid Collision Check
 
-- **窄化差异声明**: [搜索的声明]
-- **检索渠道和时间范围**: [范围]
-- **查询族**: [精确词、同义词、旧术语、相邻领域、反假设]
-- **停止条件**: 预算耗尽 / 早期发现冲突 / 足以筛选
-- **证据等级**: C / D
+- **Narrow differentiation claim**: [claim searched]
+- **Channels and date range**: [scope]
+- **Query families**: [exact, synonyms, legacy, adjacent, counter-hypothesis]
+- **Stopping condition**: budget exhausted / early collision / sufficient for screen
+- **Evidence grade**: C / D
 
-| 最相关工作 | 标识符 | 重叠程度 | 剩余差异 | 威胁 |
-|---|---|---|---|---|
-| [工作] | [DOI/URL] | [重叠] | [差异] | 高/中/低 |
+| Closest work | Identifier | Overlap | Remaining difference | Threat |
+|---|---|---|---|:---:|
+| [work] | [DOI/URL] | [overlap] | [difference] | H/M/L |
 
-**有界结论**: [使用初步的、范围限定的措辞]  
-**反面证据和覆盖缺失**: [局限性]
+**Bounded conclusion**: [Use preliminary, scope-limited wording.]  
+**Contrary evidence and missing coverage**: [limitations]
 
-## 硬性门控
+## Hard Gates
 
-| 门控 | 结果 | 证据 | 如果未知的探测方案 |
+| Gate | Result | Evidence | Probe if unknown |
 |---|:---:|---|---|
-| 重要性 | 是/未知/否 | [谁关心以及什么会改变] | [探测] |
-| 可回答性 | 是/未知/否 | [可证伪性或有界结果] | [探测] |
-| 资源路径 | 是/未知/否 | [数据、工具、访问、时间、资金、专业知识] | [探测] |
-| 伦理/治理 | 是/未知/否 | [风险和许可] | [探测] |
+| Significance | Yes/Unknown/No | [who cares and what changes] | [probe] |
+| Answerability | Yes/Unknown/No | [falsifier or bounding result] | [probe] |
+| Resource path | Yes/Unknown/No | [data, tools, access, time, money, expertise] | [probe] |
+| Ethics/governance | Yes/Unknown/No | [risk and permissions] | [probe] |
 
-## 价值与投入
+## Value And Effort
 
-| 维度 | 权重 | 得分 | 置信度 | 基于证据的理由 | 可改变决策的证据 |
+| Dimension | Weight | Score | Confidence | Evidence-based reason | Decision-changing evidence |
 |---|:---:|:---:|:---:|---|---|
-| 重要性 | 25 | X.X | 低/中/高 | [理由] | [证据] |
-| 差异化 | 20 | X.X | 低/中/高 | [理由] | [证据] |
-| 可行性 | 15 | X.X | 低/中/高 | [理由] | [证据] |
-| 验证清晰度 | 15 | X.X | 低/中/高 | [理由] | [证据] |
-| 成本效率 | 15 | X.X | 低/中/高 | [理由] | [证据] |
-| 失败残值 | 10 | X.X | 低/中/高 | [理由] | [证据] |
+| Significance | 25 | X.X | L/M/H | [reason] | [evidence] |
+| Differentiation | 20 | X.X | L/M/H | [reason] | [evidence] |
+| Feasibility | 15 | X.X | L/M/H | [reason] | [evidence] |
+| Validation clarity | 15 | X.X | L/M/H | [reason] | [evidence] |
+| Cost efficiency | 15 | X.X | L/M/H | [reason] | [evidence] |
+| Failure residual | 10 | X.X | L/M/H | [reason] | [evidence] |
 
-- **最小探测时间/成本**: [范围]
-- **首次可信结果时间/成本**: [范围]
-- **可发表/可复用结果时间/成本**: [范围]
-- **主要机会成本**: [被置换的内容]
+- **Minimum-probe time/cost**: [range]
+- **First credible-result time/cost**: [range]
+- **Publishable/reusable-result time/cost**: [range]
+- **Primary opportunity cost**: [what is displaced]
 
-## 预 mortem（事前分析）
+## Pre-Mortem
 
-- **最大失败风险**: [风险]
-- **最早预警信号**: [信号]
-- **停止规则**: [可观察的阈值]
-- **缓解措施**: [行动]
-- **失败残值**: [负面结果、边界、数据、基准、工具或可复用的方法]
-- **残值受益者**: [谁或什么决策可以使用它]
+- **Largest failure risk**: [risk]
+- **Earliest warning signal**: [signal]
+- **Stop rule**: [observable threshold]
+- **Mitigation**: [action]
+- **Failure residual**: [negative result, boundary, data, benchmark, tool, or reusable method]
+- **Residual beneficiary**: [who or what decision can use it]
 
-## 最低成本的可改变决策的探测
+## Cheapest Decision-Changing Probe
 
-- **待测试的不确定性**: [不确定性]
-- **方案**: [小型验证、试点、数据审计、访谈、复现、原型]
-- **通过标准**: [阈值]
-- **停止标准**: [阈值]
-- **预算**: [时间/资源]
+- **Uncertainty tested**: [uncertainty]
+- **Procedure**: [small proof, pilot, data audit, interview, reproduction, prototype]
+- **Pass criterion**: [threshold]
+- **Stop criterion**: [threshold]
+- **Budget**: [time/resources]
 
-## 交接至 Research Ideation
+## Handoff To Research Ideation
 
 ```yaml
 screening_decision: proceed | probe-first | park | reject
